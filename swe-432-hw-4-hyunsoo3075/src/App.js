@@ -10,22 +10,29 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      input: ""
+      kills: "",
+      deaths: "",
+      assists: ""
     }
   }
-  
+  handleChange = event=>{
+    this.setState({kills: event.target.value})
+  }
   onClick = button =>{
     if(button === "go"){
-      this.setState({input: eval(`${this.state.input} + 5`)});
+      this.setState({kills: eval(`${this.state.kills} + 5`)});
     }
     else if(button === "reset"){
       this.setState({
-        input: ""
+        kills: "",
+        deaths: "",
+        assists: ""
+
       })
     }
     else{
       this.setState({
-        input: this.state.input + button
+        kills: this.state.kills + button
       })
       /* console.log(`${button} was pushed`); */
     }
@@ -38,7 +45,7 @@ class App extends Component {
         
           <header className = "App-header">
             <h6><Header title = 'KDA Calculator'/></h6>
-            <Display answer = {this.state.input}/>
+            <Display answer = {this.state.kills} onChange={handleChange}/>
             <Keypad onClick = {this.onClick} />
             
             
