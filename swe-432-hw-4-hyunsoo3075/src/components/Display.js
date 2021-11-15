@@ -5,10 +5,17 @@ class Display extends Component{
     render(){
         let {answer}  = this.props;
         return(
-            <div>
+            <div className="e-disabled">
                 <form>
-                    <input className = 'textbox' placeholder = 'Kills' type = 'text' defaultValue = {answer}/>
-                    
+                    <div>
+                        <input className = 'textbox' disabled = {true} placeholder = 'Kills' type = 'number' defaultValue = {answer}/>
+                    </div>
+                    <div>
+                        <input className = 'textbox' disabled = {true} placeholder = 'Assists' type = 'number' defaultValue = {answer}/>
+                    </div>
+                    <div>
+                        <input className = 'textbox' disabled = {true} placeholder = 'Deaths' type = 'number' defaultValue = {answer}/>
+                    </div>
                 </form>
                 
             </div>
