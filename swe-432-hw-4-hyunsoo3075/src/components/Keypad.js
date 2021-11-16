@@ -1,6 +1,7 @@
 import React, {Component}from 'react';
 import './keypad.css';
 class Keypad extends Component{
+    // keypads
     render(){
         return (
             <div className = "container">
