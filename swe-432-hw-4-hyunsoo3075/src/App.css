@@ -7,7 +7,12 @@
   pointer-events: none;
 }
 
-
+.clear{
+  
+  float:right;
+  margin-right:800px;
+  
+}
 
 .App-header {
   background-color: #EAE7DC;
